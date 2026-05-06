@@ -46,12 +46,15 @@ env/
 .env.*.local
 
 # Application
+output/
 outputs/
+sessions/
 *.log
 temp_resume_*
 .streamlit/secrets.toml
 
 # Data & Cache
+cache/
 *.pyc
 .cache/
 *.pkl

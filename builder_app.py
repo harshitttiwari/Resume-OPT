@@ -9,6 +9,7 @@ import uuid
 import streamlit as st
 
 from builder_pipeline import BuilderState, run_builder_after_answers, run_builder_until_questions
+from github_tools import extract_github_username
 from log import get_logger
 
 log = get_logger(__name__)
@@ -68,6 +69,20 @@ def render():
             st.error("GitHub URL and Target Role are required.")
             st.stop()
 
+        normalized_github = github_url.strip()
+        normalized_linkedin = linkedin_url.strip()
+
+        # Common input mistake: URLs entered in opposite fields.
+        if "linkedin.com" in normalized_github.lower() and "github.com" in normalized_linkedin.lower():
+            normalized_github, normalized_linkedin = normalized_linkedin, normalized_github
+            st.info("GitHub and LinkedIn URLs looked swapped, so they were corrected automatically.")
+
+        try:
+            extract_github_username(normalized_github)
+        except ValueError as exc:
+            st.error(f"Invalid GitHub URL: {exc}")
+            st.stop()
+
         session_id = str(uuid.uuid4())[:8]
         old_resume_path = None
 
@@ -79,8 +94,8 @@ def render():
             old_resume_path = tmp.name
 
         initial: BuilderState = {
-            "github_url":     github_url.strip(),
-            "linkedin_url":   linkedin_url.strip(),
+            "github_url":     normalized_github,
+            "linkedin_url":   normalized_linkedin,
             "portfolio_url":  portfolio_url.strip(),
             "target_role":    target_role.strip(),
             "old_resume_path": old_resume_path,
