@@ -83,5 +83,3 @@ streamlit run app.py
 - The project uses compact event logs instead of long agent thoughts.
 - It does not scrape LinkedIn.
 - It keeps the code simple and avoids unnecessary over-engineering.
-
-If you want, I can also make this README even shorter and more student-friendly, like a 1-page project description for recruiters.
