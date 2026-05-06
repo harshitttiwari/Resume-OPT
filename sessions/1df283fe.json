@@ -1,0 +1,347 @@
+{
+  "github_url": "https://github.com/harshitttiwari",
+  "linkedin_url": "https://www.linkedin.com/in/harshit-tiwari-ab1b9b290/",
+  "portfolio_url": "",
+  "target_role": "Gen Ai Intern",
+  "old_resume_path": "C:\\Users\\asus\\AppData\\Local\\Temp\\tmpou25gj3p.pdf",
+  "export_format": "md",
+  "source_status": {
+    "github": true,
+    "linkedin": true,
+    "linkedin_export": false,
+    "portfolio": false,
+    "old_resume": true
+  },
+  "github_profile": {
+    "username": "harshitttiwari",
+    "name": "Harshit Tiwari",
+    "bio": null,
+    "location": null,
+    "blog": "",
+    "public_repos": 27,
+    "followers": 18,
+    "github_url": "https://github.com/harshitttiwari"
+  },
+  "github_repos": [
+    {
+      "name": "Deep-Research-Orchestrator",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Deep-Research-Orchestrator",
+      "updated_at": "2026-05-03T05:35:27Z",
+      "is_fork": false
+    },
+    {
+      "name": "Agentic-Resume-Optimizer",
+      "description": " LangGraph-based resume optimization prototype with semantic skill matching, ATS scoring, metric preservation, and hallucination checks.",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Agentic-Resume-Optimizer",
+      "updated_at": "2026-05-02T15:23:35Z",
+      "is_fork": false
+    },
+    {
+      "name": "AI-based-Smart-Surveillance-Systems",
+      "description": "YOLO-based systems have demonstrated strong performance in detecting vehicles, pedestrians, and suspicious behavior in real-time video streams.",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/AI-based-Smart-Surveillance-Systems",
+      "updated_at": "2026-05-01T04:39:54Z",
+      "is_fork": false
+    },
+    {
+      "name": "AccidentVision",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/AccidentVision",
+      "updated_at": "2026-04-09T12:45:42Z",
+      "is_fork": false
+    },
+    {
+      "name": "harshitttiwari.github.io",
+      "description": "",
+      "language": "HTML",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/harshitttiwari.github.io",
+      "updated_at": "2026-04-02T12:11:20Z",
+      "is_fork": false
+    },
+    {
+      "name": "introduction",
+      "description": "",
+      "language": "",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/introduction",
+      "updated_at": "2026-03-24T17:10:53Z",
+      "is_fork": false
+    },
+    {
+      "name": "Resume",
+      "description": "",
+      "language": "",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Resume",
+      "updated_at": "2026-02-11T17:23:04Z",
+      "is_fork": false
+    },
+    {
+      "name": "RAG-and-Agent-Powered-Document-analysis",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/RAG-and-Agent-Powered-Document-analysis",
+      "updated_at": "2025-10-01T19:02:31Z",
+      "is_fork": false
+    },
+    {
+      "name": "FoodieBot",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/FoodieBot",
+      "updated_at": "2025-09-16T03:36:13Z",
+      "is_fork": false
+    },
+    {
+      "name": "Breast-Cancer",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Breast-Cancer",
+      "updated_at": "2025-07-22T03:51:24Z",
+      "is_fork": false
+    },
+    {
+      "name": "Cat-or-Dog-Prediction--CNN-",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Cat-or-Dog-Prediction--CNN-",
+      "updated_at": "2025-07-22T03:49:38Z",
+      "is_fork": false
+    },
+    {
+      "name": "Plant-Disease-Detection-Fertilizer-Recommendation",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Plant-Disease-Detection-Fertilizer-Recommendation",
+      "updated_at": "2025-07-21T20:04:47Z",
+      "is_fork": false
+    },
+    {
+      "name": "Text-Data-Aalysis",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Text-Data-Aalysis",
+      "updated_at": "2025-07-21T17:36:55Z",
+      "is_fork": false
+    },
+    {
+      "name": "Sign-Prediction",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Sign-Prediction",
+      "updated_at": "2025-07-21T17:34:23Z",
+      "is_fork": false
+    },
+    {
+      "name": "Titanic-Prediction",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Titanic-Prediction",
+      "updated_at": "2025-07-21T17:32:49Z",
+      "is_fork": false
+    },
+    {
+      "name": "knn-binary-classifier",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/knn-binary-classifier",
+      "updated_at": "2025-07-21T17:30:04Z",
+      "is_fork": false
+    },
+    {
+      "name": "Mall-Customer-Clustering-KNN-",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Mall-Customer-Clustering-KNN-",
+      "updated_at": "2025-07-21T17:28:37Z",
+      "is_fork": false
+    },
+    {
+      "name": "Iris-Flower-Classification",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Iris-Flower-Classification",
+      "updated_at": "2025-07-21T17:22:54Z",
+      "is_fork": false
+    },
+    {
+      "name": "Heart-Disease-Prediction-",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Heart-Disease-Prediction-",
+      "updated_at": "2025-07-21T17:17:45Z",
+      "is_fork": false
+    },
+    {
+      "name": "To-Do-List",
+      "description": "",
+      "language": "HTML",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/To-Do-List",
+      "updated_at": "2025-07-21T17:13:15Z",
+      "is_fork": false
+    },
+    {
+      "name": "Face-Matching-Prediction-",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Face-Matching-Prediction-",
+      "updated_at": "2025-07-21T17:07:36Z",
+      "is_fork": false
+    },
+    {
+      "name": "Hand-Written-Number-Prediction-Model-",
+      "description": "",
+      "language": "CSS",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Hand-Written-Number-Prediction-Model-",
+      "updated_at": "2025-07-21T17:06:00Z",
+      "is_fork": false
+    },
+    {
+      "name": "Crop-Health-Prediction",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Crop-Health-Prediction",
+      "updated_at": "2025-07-21T17:02:10Z",
+      "is_fork": false
+    },
+    {
+      "name": "Facial-Detection",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Facial-Detection",
+      "updated_at": "2025-07-21T17:00:26Z",
+      "is_fork": false
+    },
+    {
+      "name": "Text-Detection",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Text-Detection",
+      "updated_at": "2025-07-21T16:41:04Z",
+      "is_fork": false
+    },
+    {
+      "name": "Upper-Confidence-Bound-Model",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Upper-Confidence-Bound-Model",
+      "updated_at": "2024-12-08T16:29:24Z",
+      "is_fork": false
+    }
+  ],
+  "repo_analysis": [],
+  "old_resume_text": "",
+  "missing_questions": [],
+  "user_answers": {},
+  "candidate_profile": {},
+  "ranked_projects": [],
+  "resume_draft": "",
+  "validation_report": {},
+  "human_feedback": "",
+  "final_resume": "",
+  "structured_resume": {},
+  "event_trace": [
+    {
+      "step": "source_check",
+      "status": "success",
+      "details": {
+        "github": true,
+        "linkedin": true,
+        "linkedin_export": false,
+        "portfolio": false,
+        "old_resume": true
+      }
+    },
+    {
+      "step": "github_fetch",
+      "status": "success",
+      "details": {
+        "repos_found": 26
+      }
+    }
+  ],
+  "export_path": null,
+  "session_id": "1df283fe",
+  "linkedin_data": {}
+}

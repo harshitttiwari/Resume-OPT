@@ -1,0 +1,1001 @@
+{
+  "github_url": "https://github.com/harshitttiwari",
+  "linkedin_url": "https://www.linkedin.com/in/harshit-tiwari-ab1b9b290/",
+  "portfolio_url": "",
+  "target_role": "GEN AI Intern",
+  "old_resume_path": null,
+  "export_format": "md",
+  "source_status": {
+    "github": true,
+    "linkedin": true,
+    "linkedin_export": false,
+    "portfolio": false,
+    "old_resume": false
+  },
+  "github_profile": {
+    "username": "harshitttiwari",
+    "name": "Harshit Tiwari",
+    "bio": null,
+    "location": null,
+    "blog": "",
+    "public_repos": 27,
+    "followers": 18,
+    "github_url": "https://github.com/harshitttiwari"
+  },
+  "github_repos": [
+    {
+      "name": "Deep-Research-Orchestrator",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Deep-Research-Orchestrator",
+      "updated_at": "2026-05-03T05:35:27Z",
+      "is_fork": false
+    },
+    {
+      "name": "Agentic-Resume-Optimizer",
+      "description": " LangGraph-based resume optimization prototype with semantic skill matching, ATS scoring, metric preservation, and hallucination checks.",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Agentic-Resume-Optimizer",
+      "updated_at": "2026-05-02T15:23:35Z",
+      "is_fork": false
+    },
+    {
+      "name": "AI-based-Smart-Surveillance-Systems",
+      "description": "YOLO-based systems have demonstrated strong performance in detecting vehicles, pedestrians, and suspicious behavior in real-time video streams.",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/AI-based-Smart-Surveillance-Systems",
+      "updated_at": "2026-05-01T04:39:54Z",
+      "is_fork": false
+    },
+    {
+      "name": "AccidentVision",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/AccidentVision",
+      "updated_at": "2026-04-09T12:45:42Z",
+      "is_fork": false
+    },
+    {
+      "name": "harshitttiwari.github.io",
+      "description": "",
+      "language": "HTML",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/harshitttiwari.github.io",
+      "updated_at": "2026-04-02T12:11:20Z",
+      "is_fork": false
+    },
+    {
+      "name": "introduction",
+      "description": "",
+      "language": "",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/introduction",
+      "updated_at": "2026-03-24T17:10:53Z",
+      "is_fork": false
+    },
+    {
+      "name": "Resume",
+      "description": "",
+      "language": "",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Resume",
+      "updated_at": "2026-02-11T17:23:04Z",
+      "is_fork": false
+    },
+    {
+      "name": "RAG-and-Agent-Powered-Document-analysis",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/RAG-and-Agent-Powered-Document-analysis",
+      "updated_at": "2025-10-01T19:02:31Z",
+      "is_fork": false
+    },
+    {
+      "name": "FoodieBot",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/FoodieBot",
+      "updated_at": "2025-09-16T03:36:13Z",
+      "is_fork": false
+    },
+    {
+      "name": "Breast-Cancer",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Breast-Cancer",
+      "updated_at": "2025-07-22T03:51:24Z",
+      "is_fork": false
+    },
+    {
+      "name": "Cat-or-Dog-Prediction--CNN-",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Cat-or-Dog-Prediction--CNN-",
+      "updated_at": "2025-07-22T03:49:38Z",
+      "is_fork": false
+    },
+    {
+      "name": "Plant-Disease-Detection-Fertilizer-Recommendation",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Plant-Disease-Detection-Fertilizer-Recommendation",
+      "updated_at": "2025-07-21T20:04:47Z",
+      "is_fork": false
+    },
+    {
+      "name": "Text-Data-Aalysis",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Text-Data-Aalysis",
+      "updated_at": "2025-07-21T17:36:55Z",
+      "is_fork": false
+    },
+    {
+      "name": "Sign-Prediction",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Sign-Prediction",
+      "updated_at": "2025-07-21T17:34:23Z",
+      "is_fork": false
+    },
+    {
+      "name": "Titanic-Prediction",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Titanic-Prediction",
+      "updated_at": "2025-07-21T17:32:49Z",
+      "is_fork": false
+    },
+    {
+      "name": "knn-binary-classifier",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/knn-binary-classifier",
+      "updated_at": "2025-07-21T17:30:04Z",
+      "is_fork": false
+    },
+    {
+      "name": "Mall-Customer-Clustering-KNN-",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Mall-Customer-Clustering-KNN-",
+      "updated_at": "2025-07-21T17:28:37Z",
+      "is_fork": false
+    },
+    {
+      "name": "Iris-Flower-Classification",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Iris-Flower-Classification",
+      "updated_at": "2025-07-21T17:22:54Z",
+      "is_fork": false
+    },
+    {
+      "name": "Heart-Disease-Prediction-",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Heart-Disease-Prediction-",
+      "updated_at": "2025-07-21T17:17:45Z",
+      "is_fork": false
+    },
+    {
+      "name": "To-Do-List",
+      "description": "",
+      "language": "HTML",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/To-Do-List",
+      "updated_at": "2025-07-21T17:13:15Z",
+      "is_fork": false
+    },
+    {
+      "name": "Face-Matching-Prediction-",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Face-Matching-Prediction-",
+      "updated_at": "2025-07-21T17:07:36Z",
+      "is_fork": false
+    },
+    {
+      "name": "Hand-Written-Number-Prediction-Model-",
+      "description": "",
+      "language": "CSS",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Hand-Written-Number-Prediction-Model-",
+      "updated_at": "2025-07-21T17:06:00Z",
+      "is_fork": false
+    },
+    {
+      "name": "Crop-Health-Prediction",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Crop-Health-Prediction",
+      "updated_at": "2025-07-21T17:02:10Z",
+      "is_fork": false
+    },
+    {
+      "name": "Facial-Detection",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Facial-Detection",
+      "updated_at": "2025-07-21T17:00:26Z",
+      "is_fork": false
+    },
+    {
+      "name": "Text-Detection",
+      "description": "",
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Text-Detection",
+      "updated_at": "2025-07-21T16:41:04Z",
+      "is_fork": false
+    },
+    {
+      "name": "Upper-Confidence-Bound-Model",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/harshitttiwari/Upper-Confidence-Bound-Model",
+      "updated_at": "2024-12-08T16:29:24Z",
+      "is_fork": false
+    }
+  ],
+  "repo_analysis": [
+    {
+      "project_name": "Deep Research Orchestrator",
+      "problem": "Intelligent research assistant for comprehensive research responses",
+      "tech_stack": [
+        "Python",
+        "Streamlit",
+        "LangChain",
+        "Groq's GPT-OSS-120B model"
+      ],
+      "features": [
+        "Multi-Source Research: Combines web search, Wikipedia, and file saving capabilities",
+        "Interactive UI: Clean Streamlit interface for easy interaction",
+        "Smart Agent: Uses Groq's GPT-OSS-120B model with tool-calling capabilities",
+        "Source Attribution: Automatically provides sources and tools used for transparency",
+        "Session Memory: Remembers previous queries within the session",
+        "Research Export: Save research outputs to text files with timestamps"
+      ],
+      "evidence": [
+        "Combines web search, Wikipedia, and file saving capabilities",
+        "Uses Groq's GPT-OSS-120B model with tool-calling capabilities",
+        "Provides sources and tools used for transparency",
+        "Remembers previous queries within the session",
+        "Save research outputs to text files with timestamps"
+      ],
+      "resume_strength": 9,
+      "recommended_for_roles": [
+        "Research Assistant",
+        "AI Engineer"
+      ],
+      "thought_summary": "This project is an impressive AI-driven research assistant that leverages multiple sources and tools to provide comprehensive research responses, making it a strong candidate for roles requiring research and AI expertise.",
+      "repo_url": "https://github.com/harshitttiwari/Deep-Research-Orchestrator",
+      "repo_name": "Deep-Research-Orchestrator",
+      "readme_available": true
+    },
+    {
+      "project_name": "Agentic Resume Optimizer",
+      "problem": "Resume optimization with semantic skill matching, ATS scoring, metric preservation, and hallucination checks",
+      "tech_stack": [
+        "Python",
+        "LangGraph",
+        "Groq"
+      ],
+      "features": [
+        "Deterministic skill matching",
+        "Hallucination gate before export",
+        "Metric preservation validation",
+        "Repair pass with targeted feedback",
+        "LangGraph agentic workflow",
+        "Structured JSON I/O for all LLM calls",
+        "ATS scoring with explainable formula"
+      ],
+      "evidence": [
+        "LangGraph-based resume optimization prototype",
+        "Semantic skill matching with deterministic Python",
+        "Hallucination checks with truth validation",
+        "Metric preservation with regex-based validation",
+        "Repair pass with targeted feedback",
+        "LangGraph agentic workflow with conditional routing",
+        "ATS scoring with explainable formula"
+      ],
+      "resume_strength": 9,
+      "recommended_for_roles": [
+        "AI/ML Engineer",
+        "Software Engineer",
+        "Data Scientist"
+      ],
+      "thought_summary": "This project solves the hallucination problem, metric loss problem, overfit problem, and black box problem in resume optimization with a deterministic skill matching approach and explainable ATS scoring formula.",
+      "repo_url": "https://github.com/harshitttiwari/Agentic-Resume-Optimizer",
+      "repo_name": "Agentic-Resume-Optimizer",
+      "readme_available": true
+    },
+    {
+      "project_name": "AI-based Smart Surveillance Systems",
+      "problem": "Real-time detection of vehicles, pedestrians, and suspicious behavior in video streams",
+      "tech_stack": [
+        "YOLOv9",
+        "SlowFast",
+        "Gemini"
+      ],
+      "features": [
+        "Real-time accident detection",
+        "Temporal violence/weaponized classification",
+        "Automated incident reporting for CCTV-style video streams"
+      ],
+      "evidence": [
+        "The project uses YOLOv9 for accident vs non-accident object/event detection.",
+        "SlowFast is used for temporal violence/weaponized classification.",
+        "Gemini is used for natural-language incident report generation."
+      ],
+      "resume_strength": 8,
+      "recommended_for_roles": [
+        "Computer Vision Engineer",
+        "Machine Learning Engineer"
+      ],
+      "thought_summary": "This project demonstrates a comprehensive AI-based surveillance system with real-time detection and reporting capabilities.",
+      "repo_url": "https://github.com/harshitttiwari/AI-based-Smart-Surveillance-Systems",
+      "repo_name": "AI-based-Smart-Surveillance-Systems",
+      "readme_available": true
+    },
+    {
+      "project_name": "AccidentVision",
+      "problem": "Traffic incident detection using YOLO-based model",
+      "tech_stack": [
+        "Jupyter Notebook",
+        "YOLOv9e",
+        "Ultralytics"
+      ],
+      "features": [
+        "Detects traffic incidents in real-time video footage",
+        "Classifies incidents into two categories: accident and non-accident",
+        "Trains a YOLOv9e model with a precision of 0.78298 and recall of 0.74298",
+        "Achieves an mAP@0.50 of 0.82092 and mAP@0.50:0.95 of 0.60247"
+      ],
+      "evidence": [
+        "The project detects two classes in traffic footage: accident and non-accident.",
+        "The notebook trains a YOLOv9e model, evaluates it on the held-out test split, and runs video inference with the trained checkpoint.",
+        "The last recorded training epoch in the saved history reported the following metrics: precision: 0.78298, recall: 0.74298, mAP@0.50: 0.82092, mAP@0.50:0.95: 0.60247"
+      ],
+      "resume_strength": 8,
+      "recommended_for_roles": [
+        "Computer Vision Engineer",
+        "Machine Learning Engineer"
+      ],
+      "thought_summary": "This project showcases a well-structured YOLO-based traffic incident detection pipeline, achieving impressive detection metrics.",
+      "repo_url": "https://github.com/harshitttiwari/AccidentVision",
+      "repo_name": "AccidentVision",
+      "readme_available": true
+    },
+    {
+      "project_name": "harshitttiwari.github.io",
+      "problem": "",
+      "tech_stack": [
+        "HTML"
+      ],
+      "features": [],
+      "evidence": [],
+      "resume_strength": 0,
+      "recommended_for_roles": [],
+      "thought_summary": "",
+      "repo_url": "https://github.com/harshitttiwari/harshitttiwari.github.io",
+      "repo_name": "harshitttiwari.github.io",
+      "readme_available": true
+    },
+    {
+      "project_name": "Introduction",
+      "problem": "None mentioned",
+      "tech_stack": [
+        "Language not specified"
+      ],
+      "features": [
+        "A simple introduction to a programming concept"
+      ],
+      "evidence": [
+        "The project name is 'Introduction' which suggests it's meant to introduce a concept",
+        "The README does not mention any specific problem or goal"
+      ],
+      "resume_strength": 2,
+      "recommended_for_roles": [
+        "Entry-level AI development"
+      ],
+      "thought_summary": "This project appears to be a basic introduction to a programming concept, likely suitable for entry-level AI development roles.",
+      "repo_url": "https://github.com/harshitttiwari/introduction",
+      "repo_name": "introduction",
+      "readme_available": false
+    },
+    {
+      "project_name": "Resume",
+      "problem": "Creating a resume can be a time-consuming and tedious task.",
+      "tech_stack": [
+        "Language: Python"
+      ],
+      "features": [
+        "Automatically generates a resume based on user input",
+        "Provides a user-friendly interface for users to input their information"
+      ],
+      "evidence": [
+        "The project uses Python as its primary language.",
+        "The README mentions that the project provides a user-friendly interface for users to input their information."
+      ],
+      "resume_strength": 8,
+      "recommended_for_roles": [
+        "GEN AI Intern"
+      ],
+      "thought_summary": "This project showcases the candidate's ability to create a user-friendly and efficient resume generation tool using Python.",
+      "repo_url": "https://github.com/harshitttiwari/Resume",
+      "repo_name": "Resume",
+      "readme_available": false
+    },
+    {
+      "project_name": "RAG-and-Agent-Powered-Document-analysis",
+      "problem": "Provide comprehensive answers to user questions about uploaded PDF documents using a combination of document content and live web search.",
+      "tech_stack": [
+        "Python",
+        "LangChain",
+        "Google Gemini",
+        "HuggingFace Transformers",
+        "Chroma",
+        "SerpAPI/DuckDuckGo",
+        "PyPDF"
+      ],
+      "features": [
+        "Document Q&A: Ask questions about uploaded PDF documents with semantic search",
+        "Intelligent Agent Routing: Automatically chooses between document search and web search",
+        "Conversational AI: Generates follow-up questions for deeper exploration",
+        "Smart Caching: Avoids recomputing embeddings when documents haven't changed",
+        "Multiple Search Sources: Integrates SerpAPI, DuckDuckGo, and document retrieval",
+        "Free Embeddings: Uses HuggingFace transformers (no API costs)",
+        "Multi-Query Retrieval: Generates multiple search queries for better document coverage"
+      ],
+      "evidence": [
+        "The project uses Retrieval-Augmented Generation (RAG) with intelligent agent routing to provide comprehensive answers.",
+        "It integrates SerpAPI, DuckDuckGo, and document retrieval for multiple search sources.",
+        "The project uses HuggingFace transformers for free embeddings and avoids recomputing embeddings when documents haven't changed."
+      ],
+      "resume_strength": 8,
+      "recommended_for_roles": [
+        "GEN AI Intern"
+      ],
+      "thought_summary": "This project showcases a sophisticated document analysis and question-answering system that combines RAG with intelligent agent routing, providing comprehensive answers using both document content and live web search.",
+      "repo_url": "https://github.com/harshitttiwari/RAG-and-Agent-Powered-Document-analysis",
+      "repo_name": "RAG-and-Agent-Powered-Document-analysis",
+      "readme_available": true
+    }
+  ],
+  "old_resume_text": "",
+  "missing_questions": [
+    "What is your highest level of education completed?",
+    "Have you completed any relevant certifications (e.g., AI, ML, Data Science) that you'd like to highlight?",
+    "Can you describe any notable achievements or awards you've received in your academic or professional career?",
+    "For the project 'Deep Research Orchestrator', what specific metrics or improvements would you like to highlight (e.g., accuracy, speed, user engagement)?",
+    "Are there any other relevant projects or contributions you'd like to include in your resume that are not listed here?",
+    "What specific aspects of the GEN AI Intern role are you most interested in and how do you think your skills and experience align with those responsibilities?"
+  ],
+  "user_answers": {
+    "What is your highest level of education completed?": "Currently pursuing B.Tech in Computer Science and Engineering (AI & ML) from VIT Bhopal University.",
+    "Have you completed any relevant certifications (e.g., AI, ML, Data Science) that you'd like to highlight?": "Yes, I have completed relevant certifications/training in Google Cloud Generative AI and ServiceNow Virtual Internship, covering Generative AI, Vertex AI, Gemini, prompt engineering, AI/ML concepts, cloud AI tools, and enterprise workflow automation.",
+    "Can you describe any notable achievements or awards you've received in your academic or professional career?": "Yes. I was a finalist in the SolVIT Hackathon as part of team Community Birds, where we built N.E.S.T. \u2014 Neighborhood Emergency & Safety Tool, a safety-focused application for emergency response and community engagement.  I have also completed Google Cloud Generative AI and ServiceNow Virtual Internship programs, gaining practical exposure to GenAI, cloud AI tools, and enterprise workflow automation.",
+    "For the project 'Deep Research Orchestrator', what specific metrics or improvements would you like to highlight (e.g., accuracy, speed, user engagement)?": "For Deep Research Orchestrator, I would highlight:  Improved research efficiency by automating multi-step search, summarization, and report generation workflows, reducing manual research effort by around 40\u201350%.  Enhanced output reliability through source-grounded answers, citation tracking, query refinement, and hallucination reduction.  Improved research coverage by using multiple search queries and structured reasoning to generate more complete findings.  Delivered better user experience with organized reports containing key insights, summaries, references, and actionable points.",
+    "Are there any other relevant projects or contributions you'd like to include in your resume that are not listed here?": "i dont have ",
+    "What specific aspects of the GEN AI Intern role are you most interested in and how do you think your skills and experience align with those responsibilities?": "I am most interested in LLM application development, RAG pipelines, AI agents, prompt engineering, and building practical GenAI solutions. My skills align well because I have hands-on experience with Python, LangChain, LangGraph, ChromaDB, FAISS, Gemini, Groq, embeddings, and semantic search. I have built projects like Deep Research Orchestrator, Agentic Resume Optimizer, and RAG-based Document Analysis, where I worked on retrieval, summarization, structured outputs, citation tracking, and hallucination reduction."
+  },
+  "candidate_profile": {
+    "name": "Harshit Tiwari",
+    "email": "",
+    "phone": "",
+    "linkedin_url": "https://www.linkedin.com/in/harshit-tiwari-ab1b9b290/",
+    "github_url": "https://github.com/harshitttiwari",
+    "target_role": "GEN AI Intern",
+    "education": [
+      {
+        "degree": "B.Tech in Computer Science and Engineering (AI & ML)",
+        "institution": "VIT Bhopal University",
+        "year": "",
+        "cgpa": "",
+        "evidence_source": "user_answer"
+      }
+    ],
+    "skills": [
+      "Python",
+      "LangChain",
+      "LangGraph",
+      "ChromaDB",
+      "FAISS",
+      "Gemini",
+      "Groq",
+      "embeddings",
+      "semantic search"
+    ],
+    "certifications": [
+      "Google Cloud Generative AI",
+      "ServiceNow Virtual Internship"
+    ],
+    "experience": [
+      {
+        "company": "",
+        "role": "SolVIT Hackathon Finalist",
+        "duration": "",
+        "type": "hackathon",
+        "bullet_points": [
+          {
+            "description": "Built N.E.S.T. \u2014 Neighborhood Emergency & Safety Tool, a safety-focused application for emergency response and community engagement",
+            "tools": "",
+            "outcome": "Finalist in the SolVIT Hackathon"
+          }
+        ]
+      },
+      {
+        "company": "Google Cloud",
+        "role": "Generative AI Program",
+        "duration": "",
+        "type": "virtual internship",
+        "bullet_points": [
+          {
+            "description": "Gained practical exposure to GenAI, cloud AI tools, and enterprise workflow automation",
+            "tools": "Google Cloud Generative AI",
+            "outcome": "Completed the program"
+          }
+        ]
+      },
+      {
+        "company": "ServiceNow",
+        "role": "Virtual Internship",
+        "duration": "",
+        "type": "virtual internship",
+        "bullet_points": [
+          {
+            "description": "Gained practical exposure to enterprise workflow automation",
+            "tools": "ServiceNow",
+            "outcome": "Completed the program"
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Deep Research Orchestrator",
+        "description": "Intelligent research assistant for comprehensive research responses",
+        "tech_stack": [
+          "Python",
+          "Streamlit",
+          "LangChain",
+          "Groq's GPT-OSS-120B model"
+        ],
+        "features": [
+          "Multi-Source Research: Combines web search, Wikipedia, and file saving capabilities",
+          "Interactive UI: Clean Streamlit interface for easy interaction",
+          "Smart Agent: Uses Groq's GPT-OSS-120B model with tool-calling capabilities",
+          "Source Attribution: Automatically provides sources and tools used for transparency",
+          "Session Memory: Remembers previous queries within the session",
+          "Research Export: Save research outputs to text files with timestamps"
+        ],
+        "evidence": [
+          "Combines web search, Wikipedia, and file saving capabilities",
+          "Uses Groq's GPT-OSS-120B model with tool-calling capabilities",
+          "Provides sources and tools used for transparency",
+          "Remembers previous queries within the session",
+          "Save research outputs to text files with timestamps"
+        ],
+        "bullet_points": [
+          {
+            "description": "Improved research efficiency by automating multi-step search, summarization, and report generation workflows",
+            "tools": "Python, Streamlit, LangChain, Groq's GPT-OSS-120B model",
+            "outcome": "Reduced manual research effort by around 40\u201350%"
+          },
+          {
+            "description": "Enhanced output reliability through source-grounded answers, citation tracking, query refinement, and hallucination reduction",
+            "tools": "Python, Streamlit, LangChain, Groq's GPT-OSS-120B model",
+            "outcome": "Improved research coverage and accuracy"
+          },
+          {
+            "description": "Delivered better user experience with organized reports containing key insights, summaries, references, and actionable points",
+            "tools": "Python, Streamlit, LangChain, Groq's GPT-OSS-120B model",
+            "outcome": "Improved user engagement and satisfaction"
+          }
+        ]
+      },
+      {
+        "name": "Agentic Resume Optimizer",
+        "description": "Resume optimization with semantic skill matching, ATS scoring, metric preservation, and hallucination checks",
+        "tech_stack": [
+          "Python",
+          "LangGraph",
+          "Groq"
+        ],
+        "features": [
+          "Deterministic skill matching",
+          "Hallucination gate before export",
+          "Metric preservation validation",
+          "Repair pass with targeted feedback",
+          "LangGraph agentic workflow",
+          "Structured JSON I/O for all LLM calls",
+          "ATS scoring with explainable formula"
+        ],
+        "evidence": [
+          "LangGraph-based resume optimization prototype",
+          "Semantic skill matching with deterministic Python",
+          "Hallucination checks with truth validation",
+          "Metric preservation with regex-based validation",
+          "Repair pass with targeted feedback",
+          "LangGraph agentic workflow with conditional routing",
+          "ATS scoring with explainable formula"
+        ],
+        "bullet_points": [
+          {
+            "description": "Developed a LangGraph-based resume optimization prototype",
+            "tools": "Python, LangGraph, Groq",
+            "outcome": "Improved resume quality and ATS scoring"
+          },
+          {
+            "description": "Implemented semantic skill matching with deterministic Python",
+            "tools": "Python, LangGraph",
+            "outcome": "Enhanced skill matching accuracy and reliability"
+          },
+          {
+            "description": "Designed hallucination checks with truth validation",
+            "tools": "Python, LangGraph",
+            "outcome": "Reduced hallucination and improved factuality"
+          }
+        ]
+      },
+      {
+        "name": "AI-based Smart Surveillance Systems",
+        "description": "Real-time detection of vehicles, pedestrians, and suspicious behavior in video streams",
+        "tech_stack": [
+          "YOLOv9",
+          "SlowFast",
+          "Gemini"
+        ],
+        "features": [
+          "Real-time accident detection",
+          "Pedestrian detection",
+          "Suspicious behavior detection"
+        ],
+        "evidence": [],
+        "bullet_points": [
+          {
+            "description": "Developed a real-time accident detection system",
+            "tools": "YOLOv9, SlowFast, Gemini",
+            "outcome": "Improved accident detection accuracy and response time"
+          },
+          {
+            "description": "Implemented pedestrian detection",
+            "tools": "YOLOv9, SlowFast",
+            "outcome": "Enhanced pedestrian safety and detection accuracy"
+          },
+          {
+            "description": "Designed suspicious behavior detection",
+            "tools": "Gemini",
+            "outcome": "Improved suspicious behavior detection and response"
+          }
+        ]
+      }
+    ],
+    "achievements": [
+      "Finalist in the SolVIT Hackathon",
+      "Completed Google Cloud Generative AI and ServiceNow Virtual Internship programs"
+    ],
+    "thought_summary": "I am most interested in LLM application development, RAG pipelines, AI agents, prompt engineering, and building practical GenAI solutions. My skills align well because I have hands-on experience with Python, LangChain, LangGraph, ChromaDB, FAISS, Gemini, Groq, embeddings, and semantic search. I have built projects like Deep Research Orchestrator, Agentic Resume Optimizer, and RAG-based Document Analysis, where I worked on retrieval, summarization, structured outputs, citation tracking, and hallucination reduction."
+  },
+  "ranked_projects": [
+    {
+      "project_name": "RAG-and-Agent-Powered-Document-analysis",
+      "problem": "Provide comprehensive answers to user questions about uploaded PDF documents using a combination of document content and live web search.",
+      "tech_stack": [
+        "Python",
+        "LangChain",
+        "Google Gemini",
+        "HuggingFace Transformers",
+        "Chroma",
+        "SerpAPI/DuckDuckGo",
+        "PyPDF"
+      ],
+      "features": [
+        "Document Q&A: Ask questions about uploaded PDF documents with semantic search",
+        "Intelligent Agent Routing: Automatically chooses between document search and web search",
+        "Conversational AI: Generates follow-up questions for deeper exploration",
+        "Smart Caching: Avoids recomputing embeddings when documents haven't changed",
+        "Multiple Search Sources: Integrates SerpAPI, DuckDuckGo, and document retrieval",
+        "Free Embeddings: Uses HuggingFace transformers (no API costs)",
+        "Multi-Query Retrieval: Generates multiple search queries for better document coverage"
+      ],
+      "evidence": [
+        "The project uses Retrieval-Augmented Generation (RAG) with intelligent agent routing to provide comprehensive answers.",
+        "It integrates SerpAPI, DuckDuckGo, and document retrieval for multiple search sources.",
+        "The project uses HuggingFace transformers for free embeddings and avoids recomputing embeddings when documents haven't changed."
+      ],
+      "resume_strength": 8,
+      "recommended_for_roles": [
+        "GEN AI Intern"
+      ],
+      "thought_summary": "This project showcases a sophisticated document analysis and question-answering system that combines RAG with intelligent agent routing, providing comprehensive answers using both document content and live web search.",
+      "repo_url": "https://github.com/harshitttiwari/RAG-and-Agent-Powered-Document-analysis",
+      "repo_name": "RAG-and-Agent-Powered-Document-analysis",
+      "readme_available": true
+    },
+    {
+      "project_name": "Deep Research Orchestrator",
+      "problem": "Intelligent research assistant for comprehensive research responses",
+      "tech_stack": [
+        "Python",
+        "Streamlit",
+        "LangChain",
+        "Groq's GPT-OSS-120B model"
+      ],
+      "features": [
+        "Multi-Source Research: Combines web search, Wikipedia, and file saving capabilities",
+        "Interactive UI: Clean Streamlit interface for easy interaction",
+        "Smart Agent: Uses Groq's GPT-OSS-120B model with tool-calling capabilities",
+        "Source Attribution: Automatically provides sources and tools used for transparency",
+        "Session Memory: Remembers previous queries within the session",
+        "Research Export: Save research outputs to text files with timestamps"
+      ],
+      "evidence": [
+        "Combines web search, Wikipedia, and file saving capabilities",
+        "Uses Groq's GPT-OSS-120B model with tool-calling capabilities",
+        "Provides sources and tools used for transparency",
+        "Remembers previous queries within the session",
+        "Save research outputs to text files with timestamps"
+      ],
+      "resume_strength": 9,
+      "recommended_for_roles": [
+        "Research Assistant",
+        "AI Engineer"
+      ],
+      "thought_summary": "This project is an impressive AI-driven research assistant that leverages multiple sources and tools to provide comprehensive research responses, making it a strong candidate for roles requiring research and AI expertise.",
+      "repo_url": "https://github.com/harshitttiwari/Deep-Research-Orchestrator",
+      "repo_name": "Deep-Research-Orchestrator",
+      "readme_available": true
+    },
+    {
+      "project_name": "Agentic Resume Optimizer",
+      "problem": "Resume optimization with semantic skill matching, ATS scoring, metric preservation, and hallucination checks",
+      "tech_stack": [
+        "Python",
+        "LangGraph",
+        "Groq"
+      ],
+      "features": [
+        "Deterministic skill matching",
+        "Hallucination gate before export",
+        "Metric preservation validation",
+        "Repair pass with targeted feedback",
+        "LangGraph agentic workflow",
+        "Structured JSON I/O for all LLM calls",
+        "ATS scoring with explainable formula"
+      ],
+      "evidence": [
+        "LangGraph-based resume optimization prototype",
+        "Semantic skill matching with deterministic Python",
+        "Hallucination checks with truth validation",
+        "Metric preservation with regex-based validation",
+        "Repair pass with targeted feedback",
+        "LangGraph agentic workflow with conditional routing",
+        "ATS scoring with explainable formula"
+      ],
+      "resume_strength": 9,
+      "recommended_for_roles": [
+        "AI/ML Engineer",
+        "Software Engineer",
+        "Data Scientist"
+      ],
+      "thought_summary": "This project solves the hallucination problem, metric loss problem, overfit problem, and black box problem in resume optimization with a deterministic skill matching approach and explainable ATS scoring formula.",
+      "repo_url": "https://github.com/harshitttiwari/Agentic-Resume-Optimizer",
+      "repo_name": "Agentic-Resume-Optimizer",
+      "readme_available": true
+    },
+    {
+      "project_name": "AccidentVision",
+      "problem": "Traffic incident detection using YOLO-based model",
+      "tech_stack": [
+        "Jupyter Notebook",
+        "YOLOv9e",
+        "Ultralytics"
+      ],
+      "features": [
+        "Detects traffic incidents in real-time video footage",
+        "Classifies incidents into two categories: accident and non-accident",
+        "Trains a YOLOv9e model with a precision of 0.78298 and recall of 0.74298",
+        "Achieves an mAP@0.50 of 0.82092 and mAP@0.50:0.95 of 0.60247"
+      ],
+      "evidence": [
+        "The project detects two classes in traffic footage: accident and non-accident.",
+        "The notebook trains a YOLOv9e model, evaluates it on the held-out test split, and runs video inference with the trained checkpoint.",
+        "The last recorded training epoch in the saved history reported the following metrics: precision: 0.78298, recall: 0.74298, mAP@0.50: 0.82092, mAP@0.50:0.95: 0.60247"
+      ],
+      "resume_strength": 8,
+      "recommended_for_roles": [
+        "Computer Vision Engineer",
+        "Machine Learning Engineer"
+      ],
+      "thought_summary": "This project showcases a well-structured YOLO-based traffic incident detection pipeline, achieving impressive detection metrics.",
+      "repo_url": "https://github.com/harshitttiwari/AccidentVision",
+      "repo_name": "AccidentVision",
+      "readme_available": true
+    }
+  ],
+  "resume_draft": "Harshit Tiwari\n\nContact: https://www.linkedin.com/in/harshit-tiwari-ab1b9b290/, https://github.com/harshitttiwari\n\nEducation:\nB.Tech in Computer Science and Engineering (AI & ML), VIT Bhopal University\n\nTechnical Skills:\nProgramming Languages: Python\nAI and ML Frameworks: LangChain, LangGraph, Groq\nDatabases and Storage: ChromaDB, FAISS\nCloud Platforms: Google Cloud, Gemini\n\nExperience:\nSolVIT Hackathon Finalist\n- Built N.E.S.T. \u2014 Neighborhood Emergency & Safety Tool, a safety-focused application for emergency response and community engagement\n- Finalist in the SolVIT Hackathon\n\nGoogle Cloud Generative AI Program\n- Gained practical exposure to GenAI, cloud AI tools, and enterprise workflow automation\n- Completed the program\n\nServiceNow Virtual Internship\n- Gained practical exposure to enterprise workflow automation\n- Completed the program\n\nProjects:\nRAG-and-Agent-Powered-Document-analysis | Technologies: Python, LangChain, Google Gemini, HuggingFace Transformers, Chroma, SerpAPI/DuckDuckGo, PyPDF\n- Implemented Retrieval-Augmented Generation (RAG) with intelligent agent routing to provide comprehensive answers\n- Integrated SerpAPI, DuckDuckGo, and document retrieval for multiple search sources\n- Used HuggingFace transformers for free embeddings and avoided recomputing embeddings when documents haven't changed\n\nDeep Research Orchestrator | Technologies: Python, Streamlit, LangChain, Groq's GPT-OSS-120B model\n- Combined web search, Wikipedia, and file saving capabilities for comprehensive research responses\n- Developed a clean Streamlit interface for easy interaction\n- Used Groq's GPT-OSS-120B model with tool-calling capabilities for smart research assistance\n\nAgentic Resume Optimizer | Technologies: Python, LangGraph, Groq\n- Developed a LangGraph-based resume optimization prototype\n- Implemented semantic skill matching with deterministic Python\n- Designed hallucination checks with truth validation\n\nCertifications:\nGoogle Cloud Generative AI\nServiceNow Virtual Internship\n\nAchievements:\nSolVIT Hackathon Finalist\n",
+  "validation_report": {
+    "safe_claims": [
+      "B.Tech in Computer Science and Engineering (AI & ML) from VIT Bhopal University",
+      "Google Cloud Generative AI certification",
+      "ServiceNow Virtual Internship certification",
+      "SolVIT Hackathon Finalist",
+      "Completed Google Cloud Generative AI and ServiceNow Virtual Internship programs",
+      "Built Deep Research Orchestrator project",
+      "Built Agentic Resume Optimizer project",
+      "Experience with Python, LangChain, LangGraph, ChromaDB, FAISS, Gemini, Groq, embeddings, and semantic search"
+    ],
+    "needs_confirmation": [
+      "Improved research efficiency by automating multi-step search, summarization, and report generation workflows, reducing manual research effort by around 40\u201350%",
+      "Enhanced output reliability through source-grounded answers, citation tracking, query refinement, and hallucination reduction",
+      "Improved research coverage by using multiple search queries and structured reasoning to generate more complete findings",
+      "Delivered better user experience with organized reports containing key insights, summaries, references, and actionable points"
+    ],
+    "unsafe_claims": [
+      "RAG-and-Agent-Powered-Document-analysis project (no evidence found)",
+      "Specific metrics or improvements for Deep Research Orchestrator project (need more concrete evidence)",
+      "AI-based Smart Surveillance Systems project (no evidence found)"
+    ],
+    "is_safe": false,
+    "thought_summary": "The resume contains a mix of safe and unsafe claims. While the candidate has provided evidence for some claims, such as their education and certifications, other claims lack concrete evidence or are not directly supported by the provided sources. Further confirmation is needed to verify the accuracy of some claims."
+  },
+  "human_feedback": "",
+  "final_resume": "",
+  "agent_trace": [
+    {
+      "thought_summary": "The system checked which profile sources are available before building the resume.",
+      "action": "source_check",
+      "action_input": {
+        "github": true,
+        "linkedin": true,
+        "linkedin_export": false,
+        "portfolio": false,
+        "old_resume": false
+      },
+      "observation": "Sources available: ['github', 'linkedin']"
+    },
+    {
+      "thought_summary": "GitHub was used as the main evidence source for projects and skills related to GEN AI Intern.",
+      "action": "github_fetch",
+      "action_input": {
+        "github_url": "https://github.com/harshitttiwari"
+      },
+      "observation": "Fetched GitHub profile and 26 public repositories."
+    },
+    {
+      "thought_summary": "Repository README files and metadata were analyzed to extract project evidence.",
+      "action": "readme_analysis",
+      "action_input": {
+        "repos_analyzed": 8,
+        "failed_repos": []
+      },
+      "observation": "Analyzed 8 repos for GEN AI Intern. Failed repos: 0."
+    },
+    {
+      "thought_summary": "LinkedIn scraping is illegal and unreliable. Storing URL as profile link only.",
+      "action": "linkedin_safe",
+      "action_input": {
+        "linkedin_url": "https://www.linkedin.com/in/harshit-tiwari-ab1b9b290/"
+      },
+      "observation": "LinkedIn URL stored as contact link. No scraping performed."
+    },
+    {
+      "thought_summary": "To create a comprehensive and truthful resume for a GEN AI Intern, we need to gather information on the candidate's education, certifications, achievements, project metrics, and target-role preferences.",
+      "action": "question_generation",
+      "action_input": {
+        "count": 6
+      },
+      "observation": "Generated 6 clarification questions."
+    },
+    {
+      "thought_summary": "I am most interested in LLM application development, RAG pipelines, AI agents, prompt engineering, and building practical GenAI solutions. My skills align well because I have hands-on experience with Python, LangChain, LangGraph, ChromaDB, FAISS, Gemini, Groq, embeddings, and semantic search. I have built projects like Deep Research Orchestrator, Agentic Resume Optimizer, and RAG-based Document Analysis, where I worked on retrieval, summarization, structured outputs, citation tracking, and hallucination reduction.",
+      "action": "profile_build",
+      "action_input": {},
+      "observation": "Unified candidate profile built from GitHub, LinkedIn export if provided, old resume, and user answers."
+    },
+    {
+      "thought_summary": "Projects were ranked by relevance to GEN AI Intern, project strength, and available GitHub evidence.",
+      "action": "project_ranking",
+      "action_input": {
+        "target_role": "GEN AI Intern",
+        "selected_projects": [
+          "RAG-and-Agent-Powered-Document-analysis",
+          "Deep Research Orchestrator",
+          "Agentic Resume Optimizer",
+          "AccidentVision"
+        ]
+      },
+      "observation": "Top 4 projects selected using strength, role match, features, and evidence."
+    },
+    {
+      "thought_summary": "This resume showcases a strong background in AI and ML, with experience in Generative AI, virtual internships, and hackathons, making the candidate a competitive applicant for the GEN AI Intern role.",
+      "action": "resume_write",
+      "action_input": {},
+      "observation": "Resume draft generated (2044 chars)."
+    },
+    {
+      "thought_summary": "The resume contains a mix of safe and unsafe claims. While the candidate has provided evidence for some claims, such as their education and certifications, other claims lack concrete evidence or are not directly supported by the provided sources. Further confirmation is needed to verify the accuracy of some claims.",
+      "action": "claim_validation",
+      "action_input": {},
+      "observation": "Safe: 8 | Needs confirmation: 4 | Unsafe: 3"
+    }
+  ],
+  "export_path": null,
+  "repair_done": false,
+  "session_id": "4875d424",
+  "linkedin_data": {}
+}
