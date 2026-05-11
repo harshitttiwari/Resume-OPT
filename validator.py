@@ -1,16 +1,11 @@
 """Truth, metric, quality, and export-safety checks."""
-
 from __future__ import annotations
-
 import re
 from typing import Any
-
-from llm import truth_check_with_llm
+from optimizer_llm import truth_check_with_llm
 from matcher import contains_term, terms_from_jd
 
-
 # Metric extraction
-
 METRIC_PATTERNS = [
     r"\b(?:CGPA|GPA)[:\s]*\d(?:\.\d+)?(?:/\d(?:\.\d+)?)?\b",
     r"\b\d{1,3}(?:\.\d+)?\s*%\+?",           # percentages (covers Grade/Score/Marks too)
@@ -27,12 +22,10 @@ WEAK_PHRASES = [
     "assisted with", "involved in", "participated in",
 ]
 
-
 def _compact(text: str) -> str:
     """Normalise a metric string to a comparison key."""
     text = str(text or "").lower().replace("–", "-").replace("—", "-")
     return re.sub(r"[^a-z0-9%+./]", "", text)   # strip colons, spaces, dashes for stable keying
-
 
 def extract_metrics(text: str) -> list[str]:
     """Extract numeric metrics from resume text using regex patterns."""
@@ -46,8 +39,8 @@ def extract_metrics(text: str) -> list[str]:
                 found.append(metric)
     return found
 
-
 def metric_report(original: str, rewritten: str) -> dict[str, Any]:
+    """rack whether numeric metrics from the original resume are preserved"""
     original_metrics = extract_metrics(original)
     rewritten_keys = {_compact(x) for x in extract_metrics(rewritten)}
     preserved, missing = [], []
@@ -62,10 +55,9 @@ def metric_report(original: str, rewritten: str) -> dict[str, Any]:
         "is_metric_safe":     score >= 0.8,
     }
 
-
 # Keyword comparison
-
 def keyword_comparison(original: str, final: str, jd: dict[str, Any]) -> dict[str, Any]:
+    """Compare how well the original and optimized resume match JD"""
     terms = terms_from_jd(jd, include_keywords=True)
     original_hits = [t for t in terms if contains_term(original, t)]
     final_hits = [t for t in terms if contains_term(final, t)]
@@ -81,15 +73,13 @@ def keyword_comparison(original: str, final: str, jd: dict[str, Any]) -> dict[st
         "still_missing_terms":   [t for t in terms if t not in final_hits],
     }
 
-
 # Summary removal
-
 def _original_has_summary(text: str) -> bool:
+    """Check if the original resume already contains a summary section"""
     return bool(re.search(
         r"(?im)^\s*(summary|profile|objective|professional summary)\s*$",
         text or "",
     ))
-
 
 def remove_added_summary(original: str, rewritten: str) -> str:
     """Strip LLM-added career summary sections that were not in the original."""
@@ -114,14 +104,10 @@ def remove_added_summary(original: str, rewritten: str) -> str:
             break
     return re.sub(r"\n{3,}", "\n\n", "\n".join(lines[:start] + lines[end:])).strip()
 
-
 # Truth checking
-
 def _remove_truth_false_positives(report: dict[str, Any], original: str) -> dict[str, Any]:
     """
     Filter LLM truth-check issues where all quoted terms are present in the original.
-    Tradeoff: suppresses context-level errors (e.g. "led" vs "worked with") but
-    significantly reduces false positives on rephrasing and stronger action verbs.
     """
     issues = []
     original_compact = _compact(original)
@@ -132,13 +118,10 @@ def _remove_truth_false_positives(report: dict[str, Any], original: str) -> dict
         issues.append(str(issue))
     return {"is_truthful": not issues, "issues": issues}
 
-
 def truth_report(original: str, rewritten: str) -> dict[str, Any]:
     return _remove_truth_false_positives(truth_check_with_llm(original, rewritten), original)
 
-
 # Quality gate
-
 def quality_report(
     original: str,
     final: str,

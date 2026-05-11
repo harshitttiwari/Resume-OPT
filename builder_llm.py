@@ -1,15 +1,10 @@
 """LLM prompts used by the GitHub resume builder flow."""
-
 from __future__ import annotations
-
 import json
 from typing import Any
-
 from model_client import ask_json
-from resume_format import write_resume_from_profile
 
 # GitHub repo analysis for builder
-
 def analyze_repo_with_llm(repo: dict[str, Any], readme: str, target_role: str) -> dict[str, Any]:
     prompt = f"""
 Analyze this GitHub repository for a candidate applying for: {target_role}
@@ -54,7 +49,6 @@ README:
             "recommended_for_roles": [],
         }
 
-
 # Missing questions
 
 def generate_missing_questions(
@@ -72,7 +66,7 @@ Return only valid JSON:
 }}
 
 Rules:
-- Ask at most 6 questions.
+- Ask at most 5 questions.
 - Ask only what is necessary to create a truthful resume.
 - Do not ask for information already visible in GitHub, old resume, LinkedIn export, or known data.
 - Focus on missing education, internships, certifications, achievements, metrics, project contribution, and target-role preference.
@@ -93,7 +87,6 @@ Known data:
                 "Which achievements or awards should be included?",
             ],
         }
-
 
 # Candidate profile builder
 

@@ -14,15 +14,15 @@ from github_tools import (
     fetch_github_repos,
     fetch_readme,
 )
-from llm import (
+from builder_llm import (
     analyze_repo_with_llm,
     build_candidate_profile,
     generate_missing_questions,
     validate_resume_claims,
-    write_resume_from_profile,
 )
 from log import get_logger
 from parser import load_resume_file
+from resume_format import write_resume_from_profile
 
 log = get_logger(__name__)
 PERSIST_DIR = Path("sessions")

@@ -1,34 +1,27 @@
 """Input loading, validation, and LLM-backed parsing."""
-
 from __future__ import annotations
-
 import os
 import re
 from typing import Any
 
 import fitz
 from docx import Document
-
-from llm import analyze_jd_with_llm, parse_resume_with_llm
-
+from optimizer_llm import analyze_jd_with_llm, parse_resume_with_llm
 
 # Text utilities
-
 def clean_text(text: str) -> str:
     text = str(text or "").replace("\x00", " ")
     text = re.sub(r"[•●▪]", "-", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 
-
 def _items(value: Any) -> list[str]:
-    """Coerce a value to a flat list of non-empty strings."""
+    """converts different input formats into a clean list of strings."""
     if isinstance(value, list):
         return [str(x).strip() for x in value if str(x).strip()]
     if isinstance(value, str) and value.strip():
         return [value.strip()]
     return []
-
 
 def _dedupe(items: list[str]) -> list[str]:
     """Remove duplicates, case-insensitively, preserving original casing."""
@@ -40,9 +33,7 @@ def _dedupe(items: list[str]) -> list[str]:
             out.append(item.strip())
     return out
 
-
 # File loading
-
 def load_resume_file(path: str) -> str:
     ext = os.path.splitext(path)[1].lower()
     if ext == ".pdf":
@@ -56,9 +47,7 @@ def load_resume_file(path: str) -> str:
             return clean_text(fh.read())
     raise ValueError("Unsupported resume format. Use PDF, DOCX, or TXT.")
 
-
 # Input validation
-
 def validate_inputs(
     resume: str, jd: str, role: str, export_format: str
 ) -> tuple[str, str, str, str]:
@@ -77,9 +66,7 @@ def validate_inputs(
         raise ValueError("Export format must be docx, pdf, or txt.")
     return resume, jd, role, export_format
 
-
 # LLM output normalization
-
 def _normalize_resume(data: dict[str, Any]) -> dict[str, Any]:
     """
     Normalize raw LLM parse output into a stable structure.
@@ -125,13 +112,10 @@ def _normalize_resume(data: dict[str, Any]) -> dict[str, Any]:
         "certifications": _dedupe(_items(data.get("certifications"))),
     }
 
-
 # Public parse API
-
 def parse_resume(resume_text: str) -> dict[str, Any]:
     """Parse resume text into structured data via LLM."""
     return _normalize_resume(parse_resume_with_llm(resume_text))
-
 
 def analyze_job_description(job_description: str) -> dict[str, Any]:
     """Extract structured requirements from a job description via LLM."""

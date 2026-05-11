@@ -1,11 +1,8 @@
 """Structured resume schema and rendering helpers for the builder flow."""
-
 from __future__ import annotations
-
 import json
 import re
 from typing import Any
-
 from model_client import ask_json
 
 RESUME_SCHEMA = {
@@ -46,19 +43,17 @@ RESUME_SCHEMA = {
     "achievements": [""],
 }
 
-# Structured resume schema builder
-
+# Structured resume schema builder 
 def build_structured_resume_json(
     candidate_profile: dict,
     ranked_projects: list,
     target_role: str,
     jd_analysis: dict | None = None,
 ) -> dict[str, Any]:
-    """
-    Creates the user's preferred structured resume JSON.
+    """Creates the user's preferred structured resume JSON.
     This is used by write_resume_from_profile(), then rendered into resume_text
-    for the existing Streamlit/export pipeline.
-    """
+    for the existing Streamlit/export pipeline."""
+    
     candidate_evidence = {
         "target_role": target_role,
         "candidate_profile": candidate_profile,
@@ -162,12 +157,11 @@ Evidence:
     # Deterministic cleanup and merge with ranked projects/profile evidence
     return finalize_resume_structure(data, ranked_projects, candidate_profile)
 
-
 def _simple_key(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", str(text or "").lower())
 
-
 def _project_words(text: str) -> set[str]:
+    """extracts meaningful words from project text."""
     stop_words = {
         "and", "the", "for", "with", "using", "based", "powered",
         "project", "system", "application", "analysis",
@@ -178,14 +172,13 @@ def _project_words(text: str) -> set[str]:
         if len(word) > 2 and word not in stop_words
     }
 
-
 def _items(value: Any) -> list[str]:
+    """normalizes input into a clean list of strings"""
     if isinstance(value, list):
         return [str(x).strip() for x in value if str(x).strip()]
     if isinstance(value, str) and value.strip():
         return [value.strip()]
     return []
-
 
 def _trim_bullet(text: str, limit: int = 190) -> str:
     """Trim a bullet keeping it readable and ending cleanly.
@@ -199,8 +192,8 @@ def _trim_bullet(text: str, limit: int = 190) -> str:
     trimmed = text[:limit].rsplit(" ", 1)[0].rstrip(",.;") + "."
     return trimmed
 
-
 def _dedupe(items: list[str]) -> list[str]:
+    """removes duplicate text items while keeping the original order"""
     seen, clean = set(), []
     for item in items:
         key = _simple_key(item)
@@ -209,13 +202,12 @@ def _dedupe(items: list[str]) -> list[str]:
             clean.append(item.strip())
     return clean
 
-
 def _trim_text(text: str, limit: int = 190) -> str:
+    """cleans and shortens text without cutting words"""
     text = re.sub(r"\s+", " ", str(text or "")).strip(" -")
     if len(text) <= limit:
         return text
     return text[:limit].rsplit(" ", 1)[0].rstrip(",.;") + "."
-
 
 def _project_name(project: dict) -> str:
     return str(
@@ -225,39 +217,30 @@ def _project_name(project: dict) -> str:
         or ""
     ).strip()
 
-
 def _project_url(project: dict) -> str:
     return str(project.get("github") or project.get("repo_url") or "").strip()
-
 
 def _tech_items(project: dict) -> list[str]:
     return _items(project.get("technologies") or project.get("tech_stack"))
 
-
 def _is_strong_bullet(text: Any) -> bool:
-    """Heuristic to decide if a bullet is resume-worthy.
-
-    Returns True for bullets that are sufficiently long, start with an action
-    verb, or contain explicit numeric indicators.
-    """
+    """checks whether a resume bullet point is good enough to keep."""
     t = str(text or "").strip()
     if not t:
         return False
     # numeric evidence often indicates strength
     if re.search(r"\d", t):
         return True
-    # require at least 7 words for non-numeric bullets
-    if len(t.split()) < 7:
+    # require at least 10 words for non-numeric bullets
+    if len(t.split()) < 10:
         return False
     first = t.split()[0].lower().strip("-")
     action_verbs = {
         "built", "developed", "implemented", "designed", "created",
         "engineered", "deployed", "optimized", "automated", "improved",
         "reduced", "trained", "architected", "led", "launched",
-        "integrated", "maintained", "extended", "wrote", "implemented",
-    }
+        "integrated", "maintained", "extended", "wrote", "implemented"}
     return first in action_verbs
-
 
 def _shared_tech_count(left: dict, right: dict) -> int:
     left_items = {_simple_key(item) for item in _tech_items(left)}
@@ -272,7 +255,6 @@ def _shared_tech_count(left: dict, right: dict) -> int:
             for right_item in right_items
         )
     )
-
 
 def _same_project(left: dict, right: dict) -> bool:
     left_name = _project_name(left)
@@ -294,23 +276,21 @@ def _same_project(left: dict, right: dict) -> bool:
 
     return len(common_words) >= 1 and _shared_tech_count(left, right) >= 2
 
-
 def _good_bullets(*sources: Any) -> list[str]:
     bullets = []
     for source in sources:
         for item in _items(source):
             bullet = _trim_bullet(item)
-            if bullet and (len(bullet.split()) >= 6 or re.search(r"\d", bullet)):
+            if bullet and (len(bullet.split()) >=10  or re.search(r"\d", bullet)):
                 bullets.append(bullet)
     return _dedupe(bullets)[:4]
 
-
 def _find_project(projects: list, target: dict) -> dict:
+    """searches a list of projects and finds the one that matches a target project."""
     for project in projects:
         if isinstance(project, dict) and _same_project(project, target):
             return project
     return {}
-
 
 def _project_from_ranked(ranked: dict) -> dict:
     return {
@@ -324,9 +304,8 @@ def _project_from_ranked(ranked: dict) -> dict:
         ),
     }
 
-
 def _clean_project(project: dict, ranked: dict, profile: dict) -> dict:
-    # Merge bullets from profile, explicit project bullets, and ranked evidence
+    """creates one clean project entry by merging project information from multiple sources."""
     bullets = []
     bullets.extend(_good_bullets(profile.get("bullet_points"), profile.get("bullets"), profile.get("description")))
     bullets.extend([b for b in _items(project.get("bullets")) if _is_strong_bullet(b)])
@@ -351,7 +330,6 @@ def _clean_project(project: dict, ranked: dict, profile: dict) -> dict:
         "bullets": _dedupe([_trim_bullet(b) for b in bullets if b])[:4],
     }
 
-
 def _strict_achievements(items: list[str]) -> list[str]:
     achievement_words = {
         "award", "awarded", "winner", "won", "finalist", "rank", "ranked",
@@ -365,7 +343,6 @@ def _strict_achievements(items: list[str]) -> list[str]:
         if is_real_achievement:
             clean.append(item)
     return _dedupe(clean)
-
 
 def finalize_resume_structure(
     data: dict[str, Any],
@@ -391,14 +368,12 @@ def finalize_resume_structure(
     data["achievements"] = _strict_achievements(data.get("achievements", []))
     return data
 
-
 def _clean_location(institution: str, location: str) -> str:
     institution_key = _simple_key(institution)
     location_key = _simple_key(location)
     if location_key and location_key in institution_key:
         return ""
     return location.strip()
-
 
 def _format_score(score: str) -> str:
     score = str(score or "").strip()
@@ -412,7 +387,6 @@ def _format_score(score: str) -> str:
         return f"CGPA: {score}"
     return score
 
-
 def _as_list(value: Any) -> list:
     if isinstance(value, list):
         return value
@@ -420,27 +394,22 @@ def _as_list(value: Any) -> list:
         return [value.strip()]
     return []
 
-
 def _as_dict(value: Any) -> dict:
     return value if isinstance(value, dict) else {}
-
 
 def _text(value: Any) -> str:
     return str(value or "").strip()
 
-
 def _clean_list(value: Any) -> list[str]:
     return [_text(item) for item in _as_list(value) if _text(item)]
-
 
 def _dict_list(value: Any) -> list[dict]:
     return [item for item in _as_list(value) if isinstance(item, dict)]
 
-
 def normalize_structured_resume(data: dict[str, Any]) -> dict[str, Any]:
     """
-    Stabilizes the structured resume JSON so rendering/export does not break.
-    """
+    cleanup function that converts messy LLM JSON  
+     """
     data = _as_dict(data)
     contact = _as_dict(data.get("contact"))
     raw_skills = data.get("skills")
@@ -517,10 +486,9 @@ def normalize_structured_resume(data: dict[str, Any]) -> dict[str, Any]:
         "achievements": _clean_list(data.get("achievements")),
     }
 
-
 def render_structured_resume(resume: dict[str, Any]) -> str:
     """
-    Render the structured JSON in the same section pattern as the reference resume.
+     takes structured resume JSON and converts it into one plain text resume string.
     """
     lines: list[str] = []
 
@@ -620,7 +588,6 @@ def render_structured_resume(resume: dict[str, Any]) -> str:
             lines.append(f"- {achievement}")
 
     return "\n".join(lines).strip()
-
 
 def write_resume_from_profile(
     candidate_profile: dict,

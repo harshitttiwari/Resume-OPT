@@ -1,11 +1,8 @@
 """Safe export helpers for TXT, DOCX, and PDF."""
-
 from __future__ import annotations
-
-import textwrap
+import textwrap #
 import uuid
 from pathlib import Path
-
 from docx import Document
 from docx.shared import Pt
 from reportlab.lib.pagesizes import letter
@@ -17,9 +14,7 @@ OUTPUT_DIR = Path(__file__).parent / "outputs"
 # Heading detection: all-caps or title-case short lines are treated as section headers
 _HEADING_PATTERN = lambda line: (
     len(line) <= 40
-    and (line.isupper() or (line.istitle() and len(line.split()) <= 5))
-)
-
+    and (line.isupper() or (line.istitle() and len(line.split()) <= 5)))
 
 def export_resume(text: str, output_format: str = "docx") -> str:
     output_format = output_format.lower().strip()
@@ -43,7 +38,6 @@ def export_resume(text: str, output_format: str = "docx") -> str:
     # TXT / Markdown - plain passthrough
     path.write_text(text, encoding="utf-8")
     return str(path)
-
 
 def _export_docx(text: str, path: Path) -> str:
     doc = Document()
@@ -77,7 +71,6 @@ def _export_docx(text: str, path: Path) -> str:
 
     doc.save(path)
     return str(path)
-
 
 def _export_pdf(text: str, path: Path) -> str:
     pdf = canvas.Canvas(str(path), pagesize=letter)

@@ -1,19 +1,14 @@
 """Streamlit UI for Agentic Resume Builder."""
-
 from __future__ import annotations
-
 import os
-import tempfile
-import uuid
-
+import tempfile #import tempfile
+import uuid #avoid filename conflicts when many users upload or export resumes
 import streamlit as st
-
 from builder_pipeline import BuilderState, run_builder_after_answers, run_builder_until_questions
 from github_tools import extract_github_username
 from log import get_logger
 
 log = get_logger(__name__)
-
 
 def show_event_trace(state: dict) -> None:
     st.subheader("Event Trace")
@@ -40,17 +35,16 @@ def render():
     st.caption("Build an ATS-friendly resume from your GitHub profile, LinkedIn URL, and a few questions.")
 
     # Inputs
-
     with st.form("builder_inputs"):
         github_url   = st.text_input("GitHub URL *", placeholder="https://github.com/yourusername")
         linkedin_url = st.text_input("LinkedIn URL (optional)", placeholder="https://linkedin.com/in/yourprofile")
         linkedin_zip = st.file_uploader(
             "LinkedIn data export ZIP (optional)",
             type=["zip"],
-            help="Download from LinkedIn -> Settings & Privacy -> Data Privacy -> Get a copy of your data",
-        )
+            help="Download from LinkedIn -> Settings & Privacy -> Data Privacy -> Get a copy of your data",)
         portfolio_url = st.text_input("Portfolio URL (optional)")
         target_role = st.text_input("Target Role *", placeholder="GenAI Engineer Intern / Software Developer")
+
         builder_export_format = st.selectbox(
             "Export Format",
             ["md", "docx", "txt"],
@@ -58,6 +52,7 @@ def render():
 
         old_resume = st.file_uploader("Upload old resume (optional)", type=["pdf", "docx", "txt"])
         submitted = st.form_submit_button("Start Building", type="primary", use_container_width=True)
+
     linkedin_data = {}
     if linkedin_zip:
         from github_tools import parse_linkedin_zip
@@ -134,7 +129,6 @@ def render():
             st.stop()
 
     # Phase: Answer missing questions
-
     if st.session_state.get("phase") == "questions":
         state = st.session_state["builder_state"]
         questions = state.get("missing_questions", [])
@@ -165,7 +159,6 @@ def render():
                 st.stop()
 
     # Phase: Human review
-
     if st.session_state.get("phase") == "review":
         state = st.session_state["builder_state"]
 

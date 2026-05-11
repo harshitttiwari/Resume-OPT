@@ -1,12 +1,11 @@
 """LangGraph orchestration for the Agentic Resume Optimizer."""
-
 from __future__ import annotations
 from typing import Any
 from langgraph.graph import StateGraph, END
 from typing_extensions import TypedDict
 
 from exporter import export_resume
-from llm import rewrite_resume_with_llm
+from optimizer_llm import rewrite_resume_with_llm
 from matcher import ats_score, gap_report, match_skills, missing_skill_suggestions
 from parser import analyze_job_description, load_resume_file, parse_resume, validate_inputs
 from validator import extract_metrics, quality_report, remove_added_summary, truth_report
@@ -14,7 +13,6 @@ from log import get_logger
 log = get_logger(__name__)
 
 # State
-
 class ResumeState(TypedDict):
     resume_file_path: str
     job_description: str
@@ -38,9 +36,7 @@ class ResumeState(TypedDict):
     export_status: str
     export_path: str | None
 
-
 # Nodes
-
 def node_load_validate(state: ResumeState) -> dict:
     log.info("Loading and validating resume...")
     raw = load_resume_file(state["resume_file_path"])
@@ -54,7 +50,6 @@ def node_load_validate(state: ResumeState) -> dict:
         "export_format": fmt,
     }
 
-
 def node_parse_analyze(state: ResumeState) -> dict:
     log.info("Parsing resume and analyzing JD...")
     parsed = parse_resume(state["raw_resume"])
@@ -66,13 +61,11 @@ def node_parse_analyze(state: ResumeState) -> dict:
         "must_keep_metrics": metrics,
     }
 
-
 def node_match_score(state: ResumeState) -> dict:
     log.info("Matching skills and calculating baseline ATS score...")
     matches = match_skills(state["parsed_resume"], state["jd_analysis"], state["raw_resume"])
     score, _ = ats_score(state["jd_analysis"], matches)
     return {"original_matches": matches, "original_score": score}
-
 
 def node_rewrite(state: ResumeState) -> dict:
     log.info("Rewriting resume with LLM...")
@@ -88,7 +81,6 @@ def node_rewrite(state: ResumeState) -> dict:
     rewritten = rewrite_resume_with_llm(payload)
     final = remove_added_summary(state["raw_resume"], rewritten)
     return {"rewritten": rewritten, "final_resume": final}
-
 
 def node_validate(state: ResumeState) -> dict:
     log.info("Running truth, metric, and quality checks...")
@@ -106,7 +98,6 @@ def node_validate(state: ResumeState) -> dict:
         "quality": quality,
         "comparison": comparison,
     }
-
 
 def node_repair(state: ResumeState) -> dict:
     log.info("Repair pass triggered - fixing metrics/keywords/hallucinations...")
@@ -147,7 +138,6 @@ def node_repair(state: ResumeState) -> dict:
     final = remove_added_summary(state["raw_resume"], rewritten)
     return {"rewritten": rewritten, "final_resume": final, "repair_done": True}
 
-
 def node_export(state: ResumeState) -> dict:
     log.info("Exporting final resume...")
     quality = state["quality"]
@@ -157,9 +147,7 @@ def node_export(state: ResumeState) -> dict:
         return {"export_status": "ready", "export_path": path}
     return {"export_status": "draft_needs_review", "export_path": None}
 
-
 # Conditional routing
-
 def route_after_validate(state: ResumeState) -> str:
     if state.get("repair_done"):
         return "export"   # only one repair pass allowed
@@ -173,9 +161,7 @@ def route_after_validate(state: ResumeState) -> str:
         return "repair"
     return "export"
 
-
 # Graph assembly
-
 def _build_graph() -> Any:
     graph = StateGraph(ResumeState)
 
@@ -201,12 +187,9 @@ def _build_graph() -> Any:
 
     return graph.compile()
 
-
 _graph = _build_graph()
 
-
 # Public entry point
-
 def run_resume_optimizer(
     resume_file_path: str,
     job_description: str,
@@ -264,4 +247,3 @@ def run_resume_optimizer(
         "export_status":            final_state["export_status"],
         "export_path":              final_state["export_path"],
     }
-

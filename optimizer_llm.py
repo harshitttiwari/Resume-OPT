@@ -1,15 +1,11 @@
 """LLM prompts used by the old resume optimizer flow."""
-
 from __future__ import annotations
-
 import json
 from functools import lru_cache
 from typing import Any
-
 from model_client import ask_json
 
 # Resume parsing for old optimizer
-
 @lru_cache(maxsize=16)
 def parse_resume_with_llm(resume_text: str) -> dict[str, Any]:
     prompt = f"""
@@ -40,9 +36,7 @@ Resume:
 """
     return ask_json(prompt, fast=True)
 
-
 # JD analysis for old optimizer
-
 @lru_cache(maxsize=16)
 def analyze_jd_with_llm(job_description: str) -> dict[str, Any]:
     prompt = f"""
@@ -69,14 +63,10 @@ Job description:
 """
     return ask_json(prompt, fast=True)
 
-
 # Old optimizer resume rewriting
-
 def rewrite_resume_with_llm(context: dict[str, Any]) -> str:
-    """
-    Used by the original resume optimizer flow:
-    existing resume + JD -> rewritten resume.
-    """
+    """Used by the original resume optimizer flow:
+    existing resume + JD -> rewritten resume """
     repair_section = ""
 
     if context.get("current_draft"):
@@ -130,9 +120,7 @@ Original resume:
 
     return resume_text
 
-
 # Truth checking for old optimizer
-
 def truth_check_with_llm(original_text: str, rewritten_text: str) -> dict[str, Any]:
     prompt = f"""
 Check whether the rewritten resume contains facts not supported by the original.

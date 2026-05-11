@@ -1,12 +1,9 @@
 """Streamlit UI for the Agentic Resume Optimizer."""
-
 from __future__ import annotations
-
 import os
 import tempfile
-
 import streamlit as st
-
+import builder_app
 from pipeline import run_resume_optimizer
 
 st.set_page_config(
@@ -126,7 +123,6 @@ st.title("Agentic Resume Tools")
 mode = st.radio("Select Mode", ["Optimize Existing Resume", "Build Resume from GitHub"], horizontal=True)
 
 if mode == "Build Resume from GitHub":
-    import builder_app
     builder_app.render()
     st.caption("ATS tailoring with hallucination and metric safety checks.")
     st.stop()

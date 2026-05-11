@@ -1,19 +1,15 @@
 """GitHub data fetching and repo analysis tools."""
-
 from __future__ import annotations
-
 import json
 import io
 import os
 import re
 import zipfile
-from pathlib import Path
+from pathlib import Path # Path means the location where the PDF or DOCX file should be saved.
 from typing import Any
-from urllib.parse import urlparse
-
+from urllib.parse import urlparse # used to break a URL into parts
 import requests
 from dotenv import load_dotenv
-
 from log import get_logger
 
 load_dotenv()
@@ -74,10 +70,10 @@ def extract_github_username(github_url: str) -> str:
     return username
 
 def _cache_path(key: str) -> Path:
+    """creates a safe file path for storing cached data as a JSON file"""
     CACHE_DIR.mkdir(exist_ok=True)
     safe = re.sub(r"[^a-z0-9_-]", "_", key.lower())
     return CACHE_DIR / f"{safe}.json"
-
 
 def _load_cache(key: str) -> dict | None:
     path = _cache_path(key)
@@ -88,10 +84,8 @@ def _load_cache(key: str) -> dict | None:
             return None
     return None
 
-
 def _save_cache(key: str, data: Any) -> None:
     _cache_path(key).write_text(json.dumps(data, indent=2))
-
 
 def fetch_github_profile(github_url: str) -> dict[str, Any]:
     username = extract_github_username(github_url)
@@ -117,7 +111,6 @@ def fetch_github_profile(github_url: str) -> dict[str, Any]:
     }
     _save_cache(cache_key, profile)
     return profile
-
 
 def fetch_github_repos(github_url: str, max_repos: int = 30) -> list[dict[str, Any]]:
     username = extract_github_username(github_url)
@@ -160,7 +153,6 @@ def fetch_github_repos(github_url: str, max_repos: int = 30) -> list[dict[str, A
     ]
     _save_cache(cache_key, result)
     return result
-
 
 def fetch_readme(github_url: str, repo_name: str) -> str:
     username = extract_github_username(github_url)

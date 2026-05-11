@@ -1,9 +1,7 @@
 """Deterministic skill matching and ATS scoring."""
-
 from __future__ import annotations
-
 import re
-from difflib import SequenceMatcher
+from difflib import SequenceMatcher #used to compare two pieces of text and find how similar they are.
 from typing import Any
 
 SEMANTIC_ALIASES = {
@@ -11,21 +9,19 @@ SEMANTIC_ALIASES = {
     "cloud platforms":    ["aws", "azure", "gcp", "google cloud", "heroku", "vertex ai"],
     "containerization":   ["docker", "kubernetes", "podman"],
     "ci/cd":              ["github actions", "jenkins", "gitlab ci", "circleci"],
-    "databases":          ["postgresql", "mysql", "mongodb", "sqlite", "redis"],
+    "databases":          ["postgresql", "mysql", "mongodb", "sqlite", "redis","chromadb","pincone"],
     "vector databases":   ["chromadb", "pinecone", "faiss", "weaviate", "qdrant"],
-    "data visualization": ["tableau", "power bi", "matplotlib", "plotly"],
-    "agile":              ["scrum", "jira", "kanban", "sprint"],
+    "data visualization": ["tableau", "power bi", "matplotlib", "plotly","seaborn"],
 }
 
 # Text normalisation
-
 def normalize(text: str) -> str:
     text = str(text or "").lower()
     text = re.sub(r"[^a-z0-9+#./% -]", " ", text)
     return re.sub(r"\s+", " ", text).strip()
 
-
 def stem(word: str) -> str:
+    """used to reduce words to a simpler base form"""
     word = word.lower().strip()
     if len(word) <= 3 or re.search(r"[0-9+#]", word):
         return word
@@ -45,7 +41,6 @@ def stem(word: str) -> str:
         word = word[:-1]
     return word
 
-
 def token_stems(text: str) -> set[str]:
     """Generic word stems handling punctuation, plurals, and suffix variation."""
     words = re.findall(r"[a-z0-9+#]+", normalize(text).replace("/", " ").replace("-", " "))
@@ -56,16 +51,31 @@ def token_stems(text: str) -> set[str]:
             stems.add(word[:-1])   # walked -> walke (helps fuzzy overlap)
     return stems
 
-
 def acronym(term: str) -> str:
+    """creates a short form from a multi-word term"""
     letters = [w[0] for w in re.findall(r"[A-Za-z]+", term) if w]
     return "".join(letters).lower() if len(letters) > 1 else ""
 
+# Acronym matching
+def acronym_phrase_match(text: str, term: str) -> bool:
+    """Match an acronym in text to its spelled-out phrase."""
+    target = re.sub(r"[^a-z0-9]", "", normalize(term))
+    if target.endswith("s") and len(target) > 3 and str(term or "")[-1:].islower():
+        target = target[:-1]
+    if not (3 <= len(target) <= 6) or " " in normalize(term):
+        return False
+    words = re.findall(r"[a-zA-Z][a-zA-Z0-9+#.-]*", text)
+    for i in range(len(words) - len(target) + 1):
+        phrase = words[i: i + len(target)]
+        if not any(w[:1].isupper() for w in phrase):
+            continue
+        if "".join(w[0].lower() for w in phrase) == target:
+            return True
+    return False
 
 # Variant generation
-
 def variants(term: str) -> list[str]:
-    """Generic text variants: casing, punctuation, slash splits, plurals, acronyms."""
+    """creates different possible forms of the same skill or keyword"""
     raw = str(term or "").strip()
     base = normalize(raw)
     out = [raw, base]
@@ -98,26 +108,6 @@ def variants(term: str) -> list[str]:
             clean.append(item)
     return clean
 
-
-# Acronym matching
-
-def acronym_phrase_match(text: str, term: str) -> bool:
-    """Match an acronym in text to its spelled-out phrase."""
-    target = re.sub(r"[^a-z0-9]", "", normalize(term))
-    if target.endswith("s") and len(target) > 3 and str(term or "")[-1:].islower():
-        target = target[:-1]
-    if not (3 <= len(target) <= 6) or " " in normalize(term):
-        return False
-    words = re.findall(r"[a-zA-Z][a-zA-Z0-9+#.-]*", text)
-    for i in range(len(words) - len(target) + 1):
-        phrase = words[i: i + len(target)]
-        if not any(w[:1].isupper() for w in phrase):
-            continue
-        if "".join(w[0].lower() for w in phrase) == target:
-            return True
-    return False
-
-
 def embedded_acronym_match(text: str, term: str) -> bool:
     """Match acronym sequences inside camelCase/PascalCase tokens (e.g. FastAPI)."""
     target = re.sub(r"s$", "", re.sub(r"[^a-z0-9]", "", normalize(term)))
@@ -130,10 +120,9 @@ def embedded_acronym_match(text: str, term: str) -> bool:
             return True
     return False
 
-
 # Core matching
-
 def contains_term(text: str, term: str) -> bool:
+    """checking whether the resume contains job-description terms, skills, tools, or technologies"""
     haystack = normalize(text)
     if not normalize(term):
         return False
@@ -150,8 +139,8 @@ def contains_term(text: str, term: str) -> bool:
         return True
     return False
 
-
 def similarity(term: str, unit: str) -> float:
+    """ calculates how closely a piece of text matches a skill/term """
     if contains_term(unit, term):
         return 1.0
     term_tokens: set[str] = set()
@@ -164,10 +153,8 @@ def similarity(term: str, unit: str) -> float:
     fuzzy = SequenceMatcher(None, normalize(term), normalize(unit)).ratio()
     return round(max(overlap, fuzzy if fuzzy >= 0.82 else 0), 3)
 
-
-
 def evidence_units(parsed: dict[str, Any], raw_text: str) -> list[str]:
-    """Collect all searchable text units from structured parse and raw resume."""
+    """ collects all useful resume text into small searchable pieces."""
     units: list[str] = []
     units += parsed.get("skills", [])
     units += parsed.get("certifications", [])
@@ -190,8 +177,9 @@ def evidence_units(parsed: dict[str, Any], raw_text: str) -> list[str]:
             out.append(clean)
     return out
 
-
 def terms_from_jd(jd: dict[str, Any], include_keywords: bool = False) -> list[str]:
+    """Extract unique skill/tool terms from a job description dictionary, 
+    with optional inclusion of keywords."""
     keys = ["required_skills", "preferred_skills", "tools"]
     if include_keywords:
         keys.append("keywords")
@@ -204,9 +192,7 @@ def terms_from_jd(jd: dict[str, Any], include_keywords: bool = False) -> list[st
                 terms.append(clean)
     return terms
 
-
 # Scoring
-
 def _alias_match(skill: str, units: list[str]) -> bool:
     aliases = SEMANTIC_ALIASES.get(skill.lower())
     if not aliases:
@@ -214,8 +200,9 @@ def _alias_match(skill: str, units: list[str]) -> bool:
     text = " ".join(units).lower()
     return any(alias in text for alias in aliases)
 
-
 def match_skills(parsed: dict[str, Any], jd: dict[str, Any], raw_text: str) -> dict[str, Any]:
+    """Compare JD skills against resume and categorize each skill as matched or missing, 
+    collecting evidence for each match."""
     units = evidence_units(parsed, raw_text)
     matched, missing, evidence = [], [], {}
 
@@ -235,7 +222,6 @@ def match_skills(parsed: dict[str, Any], jd: dict[str, Any], raw_text: str) -> d
             missing.append(skill)
 
     return {"matched_skills": matched, "missing_skills": missing, "skill_evidence": evidence}
-
 
 def ats_score(jd: dict[str, Any], matches: dict[str, Any]) -> tuple[float, dict[str, Any]]:
     all_skills = terms_from_jd(jd, include_keywords=True)
@@ -262,7 +248,6 @@ def ats_score(jd: dict[str, Any], matches: dict[str, Any]) -> tuple[float, dict[
         "total_jd_skills":      len(all_skills),
     }
 
-
 def gap_report(score: float, matched: list[str], missing: list[str]) -> dict[str, Any]:
     if score >= 85:
         level, rec = "Strong match", "Only minor wording improvements are needed."
@@ -282,7 +267,6 @@ def gap_report(score: float, matched: list[str], missing: list[str]) -> dict[str
         "missing_skills":        missing,
         "recommendation":        rec,
     }
-
 
 def missing_skill_suggestions(missing: list[str]) -> list[str]:
     # Capped at 8 for UI readability; full list is available in gap_report
