@@ -14,20 +14,20 @@ The design principle is pragmatic: keep deterministic logic in Python and use th
 flowchart TD
 		User[User]
 		subgraph UI
-			Streamlit[Streamlit UI (`app.py`/`builder_app.py`)]
+			Streamlit[Streamlit UI - app.py / builder_app.py]
 		end
 		subgraph Pipelines
-			Pipeline[`pipeline.py`]
-			Builder[`builder_pipeline.py`]
+			Pipeline[pipeline.py]
+			Builder[builder_pipeline.py]
 		end
 		subgraph Core
-			Matcher[`matcher.py`]
-			Validator[`validator.py`]
-			ResumeFormat[`resume_format.py`]
-			ModelClient[`model_client.py`]
+			Matcher[matcher.py]
+			Validator[validator.py]
+			ResumeFormat[resume_format.py]
+			ModelClient[model_client.py]
 		end
-		Exporter[`exporter.py`]
-		Outputs[`outputs/`]
+		Exporter[exporter.py]
+		Outputs[outputs/]
 
 		User --> Streamlit --> Pipeline
 		Streamlit --> Builder
