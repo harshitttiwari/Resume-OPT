@@ -84,5 +84,3 @@ The core pipelines (`pipeline.py`, `builder_pipeline.py`) expose functions you c
 - For questions, open an issue or contact the maintainer listed on the GitHub profile.
 
 ---
-
-If you'd like, I can also add a short example snippet showing the pipeline usage, badges (build/pyversion), or a CONTRIBUTING.md. Tell me which you'd prefer next.
