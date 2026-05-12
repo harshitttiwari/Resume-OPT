@@ -8,6 +8,41 @@ Key capabilities:
 
 The design principle is pragmatic: keep deterministic logic in Python and use the LLM only for language understanding and structured resume generation.
 
+## Architecture
+
+```mermaid
+flowchart TD
+		User[User]
+		subgraph UI
+			Streamlit[Streamlit UI (`app.py`/`builder_app.py`)]
+		end
+		subgraph Pipelines
+			Pipeline[`pipeline.py`]
+			Builder[`builder_pipeline.py`]
+		end
+		subgraph Core
+			Matcher[`matcher.py`]
+			Validator[`validator.py`]
+			ResumeFormat[`resume_format.py`]
+			ModelClient[`model_client.py`]
+		end
+		Exporter[`exporter.py`]
+		Outputs[`outputs/`]
+
+		User --> Streamlit --> Pipeline
+		Streamlit --> Builder
+		Builder --> Pipeline
+		Pipeline --> Matcher
+		Pipeline --> Validator
+		Pipeline --> ResumeFormat
+		Pipeline --> ModelClient
+		ModelClient -->|LLM calls| LLM[(LLM)]
+		Pipeline --> Exporter --> Outputs
+
+		classDef core fill:#f9f,stroke:#333,stroke-width:1px;
+		class Matcher,Validator,ResumeFormat,ModelClient core;
+```
+
 ## Features
 - Parse and score resumes against job descriptions.
 - Identify matched and missing skills and surface improvement suggestions.
